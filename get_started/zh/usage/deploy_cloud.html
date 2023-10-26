@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class=" language_zh ">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="teedoc, 部署, 云服务商, 云服务器, web服务">
+    
+    
+    <meta name="description" content="部署 teedoc 生成的网站到云服务商的 Web 服务">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <meta name="blog-generator" content="teedoc-plugin-blog">
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>部署 teedoc 生成的网站到云服务商的 Web 服务 - Knowledge Base</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                    <img class="site_logo" src="/static/image/logo.png" alt="知識庫 logo">
+                
+                
+                    <h2>知識庫</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class="active"><a  href="/get_started/zh/">安装使用</a></li>
+<li class=""><a  href="/blog/">博客</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a target="_blank" href="https://github.com/neutree/teedoc">github</a></li>
+<li class="sub_items "><a  >Language: 中文 简体</a><ul><li class=""><a  href="/get_started/en/usage/deploy_cloud.html">English</a></li>
+<li class="active"><a  href="/get_started/zh/usage/deploy_cloud.html">中文 简体</a></li>
+</ul></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/index.html"><span class="label">简介</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>部署 teedoc 生成的网站到云服务商的 Web 服务</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                            <div id="source_link">
+                                <a href="git@github.com:hsucode/xusblog.github.io.git/docs/get_started/zh/usage/deploy_cloud.md" target="_blank">
+                                    编辑本页
+                                </a>
+                            </div>
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <p>自建服务器需要自己购买服务器，需要配置服务器等等，没那么困难，但是稍微有点点复杂，另外一种选择就是使用云服务商提供的 Web 服务。</p>
+<p>我们要做的就是将生成的 html 页面文件上传到云服务商的 Web 服务中，然后就可以通过云服务商提供的域名访问了，只需要给服务商付费就可以了（一般是流量+请求次数费用）。</p>
+<p>比如常见的有阿里云、腾讯云、AWS、Google Cloud 等等，比如阿里云提供了 OSS 储存服务，腾讯云提供了 COS 储存服务，而且为静态网站做了优化，比如不带<code>.html</code>的访问连接会自动跳转到带<code>.html</code>的页面。</p>
+<blockquote>
+<p>注意有些提供商没有对静态页面做优化，可能有些特性没法设置，比如七牛云不能支持不带<code>html</code>结尾的链接，比如<code>/test</code>不能自动转到<code>/test.html</code>，以及默认没有打开访问<code>/</code>自动转到<code>/index.html</code>，以及<code>404.html</code>不能直接从储存桶里面读取，需要手工上传到七牛云的配置里面</p>
+</blockquote>
+<p>这里以腾讯云为例：</p>
+<h2 id="%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%82%A8%E5%AD%98%E6%A1%B6">创建一个储存桶</h2>
+<ul>
+<li>注册腾讯云账号，开通 COS 储存服务</li>
+<li>创建一个储存桶，比如叫<code>teedoc</code>，会得到一个储存桶名字(<code>bucket name</code>)，比如<code>teedoc-1250000000</code>，以及选择服务器地址，比如广州的<code>region</code>就是<code>ap-guangzhou</code></li>
+<li>设置里面启用静态网站选项，设置默认首页为<code>index.html</code>，设置404页面为<code>404.html</code>，如果不需要 CDN 可以把强制 HTTPS 打开，这样用户访问永远都是访问的 HTTPS 站点</li>
+<li>设置完静态站点后，会得到一个域名，比如<code>teedoc-1250000000.cos-website.ap-guangzhou.myqcloud.com</code>，这个域名就是你的网站域名，可以通过这个域名访问你的网站</li>
+<li>如果需要自定义成自己的域名，则修改“自定义源站域名”即可，其实就是设置你的域名的 CNAME 记录指向这个域名，比如<code>teedoc.example.com</code>的 CNAME 记录指向<code>teedoc-1250000000.cos-website.ap-guangzhou.myqcloud.com</code>，设置好了就可以通过<code>teedoc.example.com</code>访问你的网站了</li>
+<li>另外云服务商一般都配套了 CDN 服务，如果你的网站访问量小，可以不用开启 CDN，如果访问量大，可以开启 CDN，这样可以加速访问速度，但是会增加费用。</li>
+</ul>
+<p>另外设置 CDN 需要注意的是上一步的“自定义源站域名”的地方就不要设置了，直接设置“自定义 CDN 加速域名”即可</p>
+<h2 id="%E4%B8%8A%E4%BC%A0%E7%BD%91%E7%AB%99%E6%96%87%E4%BB%B6">上传网站文件</h2>
+<p>通过 <code>teedoc</code> 生成了网站文件，在<code>out</code>目录下， 注意一定要用<code>teedoc build</code>命令生成， 不要用<code>teedoc serve</code>命令生成！</p>
+<p>然后上传到腾讯云：</p>
+
+<pre class="language-none"><code class="language-none">teedoc-upload --progress raw --cloud tencent --region ... --bucket ... --secret_id ... --secret_key ... out
+</code></pre>
+<p>这里<code>...</code>填对应的信息， <code>secret_id</code>和<code>secret_key</code>点击控制台头像-&gt;选择访问管理-&gt;API 密钥管理-&gt;创建密钥，然后就可以看到了，可以考虑专门建立一个子账号，然后只给这个子账号 COS 的权限，这样可以保证一定程度上的安全性。</p>
+<p>另外，如果在自动构建系统中没法打印进度条，添加参数<code>--progress raw</code>；以及秘钥最好隐藏起来，比如 github 的 action 就提供了<code>secret</code>的功能：</p>
+
+<pre class="language-none"><code class="language-none">teedoc-upload --progress raw --cloud tencent --region ${{ secrets.TENCENT_REGION }} --bucket ${{ secrets.TENCENT_BUCKET }} --secret_id ${{ secrets.TENCENT_SECRET_ID }} --secret_key ${{ secrets.TENCENT_SECRET_KEY }} out
+</code></pre>
+<h2 id="%E6%9B%B4%E6%96%B0%E7%BD%91%E7%AB%99%E6%96%87%E4%BB%B6">更新网站文件</h2>
+<p>第一次上传文件后，后续不需要每次都上传所有文件，只需要上传更新的文件即可，这样可以节省时间和流量，比如：</p>
+
+<pre class="language-none"><code class="language-none">teedoc-upload --progress raw --cloud tencent --region ... --bucket ... --secret_id ... --secret_key ... old_out out
+</code></pre>
+<p>这里 <code>old_out</code>是上一次生成的网站文件，<code>out</code>是本次生成的网站文件，<code>teedoc-upload</code>会自动比较两个文件夹，然后只上传更新的文件。</p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                    </div>
+                    <div id="next">
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a>链接</a><ul><li><a target="_blank" href="https://docs.mcneel.com/rhino/7/help/en-us/index.htm">rhino help</a></li>
+<li><a  href="https://support.3ds.com/knowledge-base/">CATIA help</a></li>
+</ul>
+</li>
+<li><a>源码</a><ul><li><a target="_blank" href="https://github.com/hsucode/teedoc-blog.github.io">github</a></li>
+<li><a target="_blank" href="https://github.com/teedoc/teedoc.github.io">本网站源文件</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://cn.bing.com/?mkt=zh-CN">KNOWLEDGE BASE @2023</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/plugin_blog/main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class=" language_zh ">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="teedoc, markdown, jupyter notebook, html, 文档生成, 替代gitbook, 网站生成, 静态网站, 安装, 使用">
+    
+    
+    <meta name="description" content="teedoc， 将 markdown 或者 jupyter notbook 转换成 html 静态网页， 介绍了 teedoc 的使用方法">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <meta name="blog-generator" content="teedoc-plugin-blog">
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>teedoc 安装使用 - Knowledge Base</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                    <img class="site_logo" src="/static/image/logo.png" alt="知識庫 logo">
+                
+                
+                    <h2>知識庫</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class="active"><a  href="/get_started/zh/">安装使用</a></li>
+<li class=""><a  href="/blog/">博客</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a target="_blank" href="https://github.com/neutree/teedoc">github</a></li>
+<li class="sub_items "><a  >Language: 中文 简体</a><ul><li class=""><a  href="/get_started/en/install/index.html">English</a></li>
+<li class="active"><a  href="/get_started/zh/install/index.html">中文 简体</a></li>
+</ul></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/index.html"><span class="label">简介</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>teedoc 安装使用</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                            <div id="source_link">
+                                <a href="git@github.com:hsucode/xusblog.github.io.git/docs/get_started/zh/install/README.md" target="_blank">
+                                    编辑本页
+                                </a>
+                            </div>
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h2 id="%E5%AE%89%E8%A3%85-python3">安装 python3</h2>
+<p>需要先安装<code>Python3</code> （仅支持 <code>Python3</code>）</p>
+<p>比如在<code>Ubuntu</code>上：</p>
+
+<pre class="language-shell"><code class="language-shell">sudo apt install python3 python3-pip git
+</code></pre>
+<p><code>Windows</code> 和 <code>macOS</code>请到<a href="https://www.python.org/downloads/"  target="_blank">官网下载</a></p>
+<h2 id="%E5%AE%89%E8%A3%85-teedoc">安装 teedoc</h2>
+<p>打开终端(<code>Windows</code>按<code>Ctrl+R</code>输入<code>cmd</code>)，输入：</p>
+
+<pre class="language-shell"><code class="language-shell">pip3 install teedoc
+</code></pre>
+<p>以后使用以下命令来更新软件：</p>
+
+<pre class="language-shell"><code class="language-shell">pip3 install teedoc --upgrade
+</code></pre>
+<blockquote>
+<p>如果你的网络使用 <code>pypi.org</code> 速度很慢，可以选择其它源，比如清华 tuna 源： <code>pip3 install teedoc -i https://pypi.tuna.tsinghua.edu.cn/simple</code></p>
+</blockquote>
+<p>现在你可以在终端使用 <code>teedoc</code> 命令了</p>
+<p>如果不能，请检查是不是<code>Python</code>可执行目录没有加入到环境变量 <code>PATH</code>,<br />
+比如可能在 <code>~/.local/bin</code></p>
+<h2 id="%E6%96%B0%E5%BB%BA%E5%B7%A5%E7%A8%8B">新建工程</h2>
+<p>新建一个空目录用来放文档工程</p>
+
+<pre class="language-shell"><code class="language-shell">mkdir my_site
+cd my_site
+teedoc init
+</code></pre>
+<p>或者</p>
+
+<pre class="language-shell"><code class="language-shell">teedoc -d my_site init
+</code></pre>
+<p>选择<code>1</code>，也就是<code>minimal</code>模板进行生成， 也可以直接<code>teedoc -d my_site --template=minimal init</code>进行生成</p>
+<p>这会在 <code>my_site</code> 目录下自动生成一些基础文件</p>
+<p>另外，除了使用<code>init</code>命令生成一份最小工程，你也可以获得一份官网文档源码，基于这个文档内容修改</p>
+
+<pre class="language-shell"><code class="language-shell">git clone https://github.com/teedoc/teedoc.github.io my_site
+</code></pre>
+<p>或者</p>
+
+<pre class="language-shell"><code class="language-shell">git clone https://gitee.com/teedoc/teedoc.gitee.io my_site
+</code></pre>
+<h2 id="%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6">安装插件</h2>
+<p>这会根据<code>site_config.json</code>中的<code>plugins</code>的插件设置安装插件</p>
+
+<pre class="language-shell"><code class="language-shell">cd my_site
+teedoc install
+</code></pre>
+<blockquote>
+<p>插件也是以 <code>python</code> 包的形式发布的， 所以这会从 <code>pypi.org</code> 下载对应的插件，同样，也可以使用其它源，比如清华 tuna 源： <code>teedoc -i https://pypi.tuna.tsinghua.edu.cn/simple install</code></p>
+</blockquote>
+<h2 id="%E6%9E%84%E5%BB%BA-%3Ccode%3EHTML%3C/code%3E-%E9%A1%B5%E9%9D%A2%E5%B9%B6%E8%B5%B7%E4%B8%80%E4%B8%AA%3Ccode%3EHTTP%3C/code%3E%E6%9C%8D%E5%8A%A1">构建 <code>HTML</code> 页面并起一个<code>HTTP</code>服务</h2>
+
+<pre class="language-shell"><code class="language-shell">teedoc serve
+</code></pre>
+<p>这个命令会先构建所有<code>HTML</code>页面以及拷贝资源文件，然后起一个<code>HTTP</code>服务<br />
+如果只需要生成页面，使用</p>
+
+<pre class="language-shell"><code class="language-shell">teedoc build
+</code></pre>
+<p>在显示 <code>Starting server at 0.0.0.0:2333 ....</code> 后，就可以了</p>
+<p>打开浏览器访问: <a href="http://127.0.0.1:2333"  target="_blank">http://127.0.0.1:2333</a></p>
+<p>同时可以看到目录下多了一个<code>out</code>目录，里面就是生成的静态网站内容，直接拷贝到服务器使用<code>nginx</code>或者<code>apache</code>进行部署即可</p>
+<h2 id="%E5%9C%A8-github-%E4%B8%8A%E5%9F%BA%E4%BA%8E%E6%A8%A1%E6%9D%BF%E4%BB%93%E5%BA%93%E5%88%9B%E5%BB%BA%E6%96%B0%E4%BB%93%E5%BA%93-%E5%B9%B6%E4%BD%BF%E7%94%A8-pages-%E6%9C%8D%E5%8A%A1%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%E7%BD%91%E7%AB%99">在 github 上基于模板仓库创建新仓库 并使用 pages 服务快速创建网站</h2>
+<p>使用 teedoc 官网模板, 使用 github pages 功能, 可以快速创建一个属于你自己的网站, 不需要自己搭建和维护服务器, 不需要自己部署 HTTPS 证书, 也不需要任何密钥配置, 3 分钟内就可以完成.</p>
+<p>不过 github pages 服务也有缺点, 就是中国国内某些网络线路可能无法访问</p>
+<h3 id="%E5%9F%BA%E4%BA%8E%E6%A8%A1%E6%9D%BF%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93">基于模板创建仓库</h3>
+<ul>
+<li>访问 <a href="https://github.com/teedoc/template"  target="_blank">https://github.com/teedoc/template</a> 或者 <a href="https://github.com/teedoc/teedoc.github.io"  target="_blank">https://github.com/teedoc/teedoc.github.io</a>， 点击 <code>Use this template</code></li>
+</ul>
+<p><img src="../../assets/images/github_use_template.jpg" alt="github use template" /></p>
+<ul>
+<li>设置新仓库的名字为<code>用户名或者组织名.github.io</code>,  选择公开仓库, 然后确认提交</li>
+</ul>
+<p><img src="../../assets/images/create_repo.jpg" alt="create repo" /></p>
+<blockquote>
+<p>之后使用<code>git clone 你的仓库地址</code>就可以克隆到本地了</p>
+</blockquote>
+<h3 id="%E8%AE%BE%E7%BD%AE-pages-%E6%9C%8D%E5%8A%A1">设置 pages 服务</h3>
+<ul>
+<li>等待自动构建生成新的分支<code>gh-pages</code>, 可以点击 <code>Actions</code> 栏目查看自动构建的进度, 如果有绿色的勾勾出现了就代表可以了, 如果出现了红色的叉叉则是构建失败了, 哪里出了什么问题, 可以按照下面的截图方法点进去查看日志(提交问题必须要日志截图)并提交 <a href="https://github.com/teedoc/teedoc.github.io/issues/new"  target="_blank">issue</a> 反馈</li>
+</ul>
+<p><img src="../../assets/images/action_status.jpg" alt="action status" /></p>
+<p>如果有错误, 可以按照下图点进去查看错误日志:<br />
+<img src="../../assets/images/action_error.jpg" alt="error0" /><br />
+<img src="../../assets/images/action_error_log.jpg" alt="error" /></p>
+<ul>
+<li>设置仓库的 <code>pages</code> 服务, 选择<code>gh-pages</code>分支, 如果没有这个分支, 则是上一步还没进行完或者出错了,可以查看问题提交 <a href="https://github.com/teedoc/teedoc.github.io/issues/new"  target="_blank">issue</a> 反馈</li>
+</ul>
+<p><img src="../../assets/images/pages_settings.jpg" alt="pages" /></p>
+<ul>
+<li>然后访问 <code>用户名或者组织名.github.io</code>, 就会发现有网页啦, 内容和<code>teedoc.github.io</code>的一模一样!</li>
+</ul>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                    </div>
+                    <div id="next">
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a>链接</a><ul><li><a target="_blank" href="https://docs.mcneel.com/rhino/7/help/en-us/index.htm">rhino help</a></li>
+<li><a  href="https://support.3ds.com/knowledge-base/">CATIA help</a></li>
+</ul>
+</li>
+<li><a>源码</a><ul><li><a target="_blank" href="https://github.com/hsucode/teedoc-blog.github.io">github</a></li>
+<li><a target="_blank" href="https://github.com/teedoc/teedoc.github.io">本网站源文件</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://cn.bing.com/?mkt=zh-CN">KNOWLEDGE BASE @2023</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/plugin_blog/main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>
